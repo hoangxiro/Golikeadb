@@ -1,31 +1,68 @@
-#HELU MẤY MOM 
-HD MẤY NÍ CHẠY TOOL GOLIKE NÈ 
-B1 : SETUP MÔI TRƯỜNG TERMUX PYTHON
-termux-setup-storage && pkg update && pkg upgrade -y && pkg install python php && pkg install python-pip && pip install --upgrade pip 
-CỨ HỎI [Y/N] NHẬP Y
-SETUP XONG VUỐT BÊN TAY TRÁI NEW CMD TERMUX
-pkg update -y && pkg upgrade -y && pkg install -y proot-distro android-tools && proot-distro install ubuntu && proot-distro login ubuntu && apt update -y && apt upgrade -y && apt install -y python3 python3-pip android-tools-adb
-CỨ CÓ Y/N CHỌN Y
-proot-distro(termux)
+🔥 HƯỚNG DẪN CÀI TOOL GOLIKE ADB – Hoangdaixu1.6.py  
+👨‍💻 Tác giả: Trần Đình Hoàng – @hoangdaixu
 
-Cập nhật hệ thống pkg : pkg update && pkg upgrade
-Cho phép truy cập file trong máy : termux-setup-storage
-cài proot-distro : pkg install proot-distro
-cài Ubuntu : proot-distro install ubuntu
-Login ubuntu local : proot-distro login ubuntu
-Cập nhật hệ thống : apt update && apt upgrade -y
-Cài Python : apt install python3 python3-pip -y
-Cài ADB : apt install android-tools-adb 
-Cài GIT : apt install git -y 
-clone TOOL : git clone https://github.com/deno4908/GOLIKE_TOOL
-cd : cd GOLIKE_TOOL
-Cài packages : pip install -r requirements.txt --break-system-packages --force-reinstall --ignore-installed
-Run TOOL : python3 main.py
-ADB(wireless)
+━━━━━━━━━━━━━━━  
+📲 BƯỚC 1: CÀI ĐẶT TERMUX + PYTHON  
 
-pair(ghép đôi) : adb pair {IP}:{PORT} sau đó nhập mã ghép đôi là được
-connect(kết nối) : adb connect {IP}:{PORT}
- BẠN CÀI XONG R THÌ  proot-distro login ubuntu
- pair(ghép đôi) : adb pair {IP}:{PORT} sau đó nhập mã ghép đôi là được
-connect(kết nối) : adb connect {IP}:{PORT} 
-VẬY LÀ LOGIN XONG GIỜ QUAY LẠI TAB 1 TERMUX NHẬP cd /sdcard/Download/ && python Hoangdaixu1.6.py
+termux-setup-storage  
+pkg update && pkg upgrade -y  
+pkg install python php git -y  
+pip install --upgrade pip  
+
+🔁 Nếu có hỏi [Y/N] → nhập y
+
+━━━━━━━━━━━━━━━  
+🧠 BƯỚC 2: CÀI UBUNTU QUA PROOT-DISTRO  
+
+pkg install proot-distro android-tools -y  
+proot-distro install ubuntu  
+proot-distro login ubuntu
+
+━━━━━━━━━━━━━━━  
+💻 BƯỚC 3: SETUP MÔI TRƯỜNG TRONG UBUNTU  
+
+apt update && apt upgrade -y  
+apt install python3 python3-pip git android-tools-adb -y
+
+━━━━━━━━━━━━━━━  
+🚀 BƯỚC 4: CÀI TOOL HOANGDAIXU GOLIKE  
+
+cd ~  
+git clone https://github.com/deno4908/GOLIKE_TOOL  
+cd GOLIKE_TOOL  
+pip install -r requirements.txt --break-system-packages --force-reinstall --ignore-installed
+
+━━━━━━━━━━━━━━━  
+🎯 BƯỚC 5: CHẠY TOOL  
+
+python3 main.py
+
+━━━━━━━━━━━━━━━  
+📶 KẾT NỐI ADB KHÔNG DÂY (WIRELESS)  
+
+🔸 Ghép đôi thiết bị (Pair):  
+adb pair IP:PORT  
+👉 Nhập mã PIN hiện trên thiết bị
+
+🔸 Kết nối thiết bị:  
+adb connect IP:PORT  
+📌 IP và PORT lấy trong “ADB Wireless” trong tùy chọn nhà phát triển điện thoại
+
+━━━━━━━━━━━━━━━  
+📂 CHẠY TOOL `Hoangdaixu1.6.py` RIÊNG  
+
+🔸 Tải tool:  
+cd /sdcard/Download/  
+wget https://raw.githubusercontent.com/hoangxiro/Golikeadb/refs/heads/main/Hoangdaixu1.6.py  
+
+🔸 Chạy tool:  
+python3 Hoangdaixu1.6.py
+
+━━━━━━━━━━━━━━━  
+✨ LƯU Ý:  
+🔁 Mỗi lần mở Termux, cần chạy lại:  
+proot-distro login ubuntu
+xong nhập adb connect ip:port để kết nối 
+
+⚠️ Nếu bị lỗi `adb: command not found`, chạy:  
+apt install android-tools-adb -y
