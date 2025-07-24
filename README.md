@@ -8,6 +8,8 @@ termux-setup-storage
 pkg update && pkg upgrade -y  
 pkg install python php git -y  
 pip install --upgrade pip  
+hoặc
+termux-setup-storage && pkg update && pkg upgrade -y && pkg install python php && pkg install python-pip && pip install --upgrade pip 
 
 🔁 Nếu có hỏi [Y/N] → nhập y
 
@@ -17,6 +19,9 @@ pip install --upgrade pip
 pkg install proot-distro android-tools -y  
 proot-distro install ubuntu  
 proot-distro login ubuntu
+
+hoặc 
+pkg update -y && pkg upgrade -y && pkg install -y proot-distro android-tools && proot-distro install ubuntu && proot-distro login ubuntu && apt update -y && apt upgrade -y && apt install -y python3 python3-pip android-tools-adb
 
 ━━━━━━━━━━━━━━━  
 💻 BƯỚC 3: SETUP MÔI TRƯỜNG TRONG UBUNTU  
