@@ -33,7 +33,7 @@ apt install python3 python3-pip git android-tools-adb -y
 🚀 BƯỚC 4: CÀI TOOL HOANGDAIXU GOLIKE  
 
 cd ~  
-git clone https://github.com/deno4908/GOLIKE_TOOL  
+git clone https://github.com/hoangxiro/Golikeadb  
 cd GOLIKE_TOOL  
 pip install -r requirements.txt --break-system-packages --force-reinstall --ignore-installed
 
